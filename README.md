@@ -6,19 +6,18 @@ trn_indel contains 3 procedures:
 3. Calculating transposon insertion or deletion rate and make bed file for visulization
 ***
 ## installation
-<<<<<<< HEAD
 For easy install, run install.sh in *trn_indel* folder after download and unzip the source code. It will add all the scripts needed into your PATH. Also, it will download several big transposon.bed file to the annotation fold. After installation, please use `source ~/.bashrc` or re-load the server.
 After this, simple use `trn_indel.sh` to run the pipeline.
 ***
 ## usage
-trn_indel <options> [-l left.fq] [-r right.fq] [-g genome]
-optional arguments:
-    -s fragment size in DNAseq. --default: 500
-    -p prefix name for output files. trn_indel will creat a fold named prefix and write all the result in it. --default: ./result
-    -c CPU number used for pipeline. --default: 1
-    -f If set, trn_indel will just use both ends of transposon sequence for indel detection. This can reduce the effect of artificial bias by removing reads mapping to genome and middle of transposon which suppose not to be so long. default: unset
-    -I bwa mem index for genome mapping. --default: program_path/annotation/genome/bwa_index/genome
-    -h show help information.
+trn_indel <options> [-l left.fq] [-r right.fq] [-g genome]<br>
+optional arguments:<br>
+    -s fragment size in DNAseq. --default: 500<br>
+    -p prefix name for output files. trn_indel will creat a fold named prefix and write all the result in it. --default: ./result<br>
+    -c CPU number used for pipeline. --default: 1<br>
+    -f If set, trn_indel will just use both ends of transposon sequence for indel detection. This can reduce the effect of artificial bias by removing reads mapping to genome and middle of transposon which suppose not to be so long. default: unset<br>
+    -I bwa mem index for genome mapping. --default: program_path/annotation/genome/bwa_index/genome<br>
+    -h show help information.<br>
 ***
 ## output
 trn_indel gives many output which the most important three one is **xxx.insertion.refined.bp.summary**, **xxx.frequency** and **xxx.locus**
