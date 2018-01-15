@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ $# -lt 1 ];then
+	echo0 1 $0" in.fa"
+	exit 1
+fi
+awk 'BEGIN{FS=OFS="\t"} {if($1~/^>/){name=substr($1,2);a[name]=0}else{a[name]+=length($1)}} END{for(i in a){print i,a[i]}}' $1
